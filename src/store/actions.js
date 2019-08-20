@@ -10,7 +10,7 @@ export default {
       .then(response => {
         commit('SET_TRANSACTION', response.data)
         // console.log(response.data)
-        return response
+        return response.data
       })
       .catch(() => {
         return []
