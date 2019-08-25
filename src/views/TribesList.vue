@@ -8,7 +8,7 @@
           <div class="col-8">
           </div>
             <div class="col-4">
-            <input type="search" class="form-control" placeholder="Input tribe name" />
+            <input type="search" v-model="tribeName" class="form-control" placeholder="Input tribe name" />
           </div>
         </div>
       </div>
@@ -16,7 +16,7 @@
   </div>
   <div class="container mt-0">
     <div class="row">
-      <div class="col-md-4 col-lg-3 d-flex justify-content-center" v-for="(token, index) in (filterOption === 'tribes' ? tribes : tokens )" :key="index">
+      <div class="col-md-4 col-lg-3 d-flex justify-content-center" v-for="(token, index) in tribes" :key="index">
           <div class="card card-icon-2 card-body shadow-3d hover-bg-primary-3 pb-2 justify-content-center rounded-0">
             <div class="d-flex justify-content-between">
               <div class="icon-round mb-3 mb-md-4 icon bg-primary-2">
@@ -28,10 +28,9 @@
               </div>
               </div>
               <div>
-                <p class="border-bottom mb-1 pb-1">
-                  {{((metadata(token.symbol).desc && metadata(token.symbol).desc.length > 100) ? (metadata(token.symbol).desc.slice(0, 100) + '..' ) : metadata(token.symbol).desc) || 'No description provided'}}
-                </p>
-                <span class="text-small">by <a :href="`https://steemit.com/@${token.issuer}`" target="_blank">@{{token.issuer}}</a></span>
+                <h6 class="font-weight-bold">{{token.name}}</h6>
+                <p class="border-bottom mb-1 pb-1">{{((metadata(token.symbol).desc && metadata(token.symbol).desc.length > 100) ? (metadata(token.symbol).desc.slice(0, 100) + '..' ) : metadata(token.symbol).desc) || 'No description provided'}}</p>
+                <span class="text-small">by <a :href="`https://steemit.com/@${token.issuer}`" class="font-weight-bold" target="_blank">@{{token.issuer}}</a></span>
               </div>
             </div>
           </div>
@@ -45,15 +44,12 @@ export default {
   name: 'TribesList',
   data () {
     return {
-      
+      tribeName: ''
     }
   },
   computed: {
-    tokens () {
-      return this.$store.getters.tribesTokens
-    },
     tribes () {
-      return this.$store.getters.tribesList
+      return this.$store.getters.tribesByName(this.tribeName)
     },
     metadata () {
       return this.$store.getters.tribeMetadata
@@ -62,9 +58,6 @@ export default {
   methods: {
     getTribesTokens () {
       this.$store.dispatch('getTribesTokens')
-    },
-    onFilterOptionChange (option) {
-      this.filterOption = option
     }
   },
   created () {

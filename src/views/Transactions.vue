@@ -13,7 +13,7 @@
         </div>
         <div class="row mb-1">
           <div class="col-md-6">
-            <div class="input-group bg-primary-light p-1">
+            <div class="input-group bg-primary-light p-1 mb-2">
               <input type="number" v-debounce:600='fetchBlockById' v-model="blockId" class="form-control input" placeholder="Put your search query" aria-label="Recipient's username" aria-describedby="basic-addon2">
               <div class="input-group-append">
                 <span class="input-group-text rounded-0" id="basic-addon2">block #</span>

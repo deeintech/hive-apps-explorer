@@ -110,6 +110,16 @@ export default new Vuex.Store({
         image: 'https://steemitimages.com/u/actifit/avatar'
       },
       { 
+        text: 'Dporn',
+        value: 'dporn',
+        customJson: [],
+        accounts: ['dporn'],
+        metadataTags: ['dporn', 'porn', 'nsfw'],
+        metadataAppNames: ['dporn'],
+        scotTokens: ['PORN'],
+        image: 'https://steemitimages.com/u/dporn/avatar'
+      },
+      { 
         text: 'DLike',
         value: 'dlike',
         customJson: [],

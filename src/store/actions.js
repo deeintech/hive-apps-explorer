@@ -73,7 +73,7 @@ export default {
         'contract': 'tokens',
         'table': 'tokens',
         'query': {},
-        'limit': 50,
+        'limit': 100,
         'offset': 0, 
         'indexes': []
         }

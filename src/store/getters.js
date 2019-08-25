@@ -177,6 +177,9 @@ export default {
     let token = state.tribesTokens.find(t => t.symbol === symbol)
     return JSON.parse(token.metadata)
   },
+  tribesByName: (state) => (name) => {
+    return state.tribesTokens.filter(t => t.name.toLowerCase().includes(name))
+  },
   tribesList: (state) => {
     return state.tribesTokens.filter(t => {
       if(JSON.parse(t.metadata).desc) {
