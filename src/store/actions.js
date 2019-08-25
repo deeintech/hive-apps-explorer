@@ -60,7 +60,7 @@ export default {
         return []
       })
   },
-  async getTribesTokens ({ commit }, tokens) {
+  async getTribesTokens ({ commit }, limit) {
     const contractsUrl = `${process.env.VUE_APP_STEEMENGINE_API}/contracts`
     const headers = {
       'Content-Type': 'application/json'
@@ -73,14 +73,14 @@ export default {
         'contract': 'tokens',
         'table': 'tokens',
         'query': {},
-        'limit': 100,
+        'limit': limit,
         'offset': 0, 
         'indexes': []
         }
     }
     await axios.post(contractsUrl, body, headers)
       .then(response => {
-        tokens = response.data.result
+        let tokens = response.data.result
         commit('SET_TRIBES_TOKENS', tokens)
         // console.log(tokens)
         return tokens
