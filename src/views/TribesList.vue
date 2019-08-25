@@ -5,12 +5,12 @@
       <div class="col-lg-12">
         <h2>Steem Tribes List</h2>
         <div class="row mb-2">
-          <div class="col-7">
+          <div class="col-md-7">
           </div>
-            <div class="col-4">
+            <div class="col-md-4">
             <input type="search" v-model="tribeName" class="form-control" placeholder="Input tribe name" />
           </div>
-          <div class="col-1">
+          <div class="col-md-1">
             <b-form-select v-model="perPage" :options="pageOptions" @change="getTribesTokens"></b-form-select>
           </div>
         </div>
