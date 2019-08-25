@@ -95,14 +95,6 @@ export default {
     fetchBlockById (blockId) {
       this.$store.dispatch('fetchBlockById', blockId)
     },
-    // fetchPreviousBlock () {
-    //   this.blockId = parseInt(this.blockId) - 1
-    //   this.fetchBlockById(this.blockId)
-    // },
-    // fetchNextBlock () {
-    //   this.blockId = parseInt(this.blockId) + 1
-    //   this.fetchBlockById(this.blockId)
-    // },
     fetchDapps () {
       this.$store.dispatch('fetchDapps', this.dapp)
     },

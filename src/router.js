@@ -14,14 +14,19 @@ export default new Router({
       component: Home
     },
     {
-      path: '/appTrx',
-      name: 'appTrx',
+      path: '/trx',
+      name: 'trx',
       component: () => import(/* webpackChunkName: "transactions" */ './views/Transactions.vue')
     },
     {
       path: '/about',
       name: 'about',
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+    },
+    {
+      path: '/tribeslist',
+      name: 'tribeslist',
+      component: () => import(/* webpackChunkName: "tribeslist" */ './views/TribesList.vue')
     },
     {
       path: '/trx/:trxId',

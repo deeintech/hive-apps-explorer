@@ -9,7 +9,7 @@
 import Transactions from '@/views/Transactions.vue'
 
 export default {
-  name: 'home',
+  name: 'Home',
   components: {
     Transactions
   }

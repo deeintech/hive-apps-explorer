@@ -59,26 +59,34 @@ export default {
       .catch(() => {
         return []
       })
+  },
+  async getTribesTokens ({ commit }, tokens) {
+    const contractsUrl = `${process.env.VUE_APP_STEEMENGINE_API}/contracts`
+    const headers = {
+      'Content-Type': 'application/json'
+    }
+    const body = {
+      jsonrpc: '2.0',
+      method: 'find',
+      id: '1',
+      params: {
+        'contract': 'tokens',
+        'table': 'tokens',
+        'query': {},
+        'limit': 50,
+        'offset': 0, 
+        'indexes': []
+        }
+    }
+    await axios.post(contractsUrl, body, headers)
+      .then(response => {
+        tokens = response.data.result
+        commit('SET_TRIBES_TOKENS', tokens)
+        // console.log(tokens)
+        return tokens
+      })
+      .catch(() => {
+        return []
+      })
   }
-  // async fetchTransactionById ({ commit }, trxId) {
-  //   const url = process.env.VUE_APP_STEEMIT_MAINNET_PROD
-  //   const headers = {
-  //     'Content-Type': 'application/json'
-  //   }
-  //   const body = {
-  //     jsonrpc: '2.0',
-  //     method: 'account_history_api.get_transaction',
-  //     id: 1,
-  //     params: {id: `${trxId}`}
-  //   }
-  //   await axios.post(url, body, headers)
-  //     .then(response => {
-  //       // commit('SET_ACCOUNT', response.data.result)
-  //       console.log(response.data)        
-  //       return response.data
-  //     })
-  //     .catch(() => {
-  //       return []
-  //     })
-  // }
 }

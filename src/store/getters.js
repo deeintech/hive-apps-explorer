@@ -172,6 +172,18 @@ export default {
     return state.transactions.find(t => t.transaction_id === id)
   },
   totalTransactions: (state, getters) => (dapp) => getters.dappsTransactions(dapp).length,
+  tribesTokens: (state) => state.tribesTokens,
+  tribeMetadata: (state) => (symbol) => {
+    let token = state.tribesTokens.find(t => t.symbol === symbol)
+    return JSON.parse(token.metadata)
+  },
+  tribesList: (state) => {
+    return state.tribesTokens.filter(t => {
+      if(JSON.parse(t.metadata).desc) {
+        return (JSON.parse(t.metadata).desc.toLowerCase().includes('tribe') || JSON.parse(t.metadata).desc.toLowerCase().includes('community'))
+      }
+    })
+  },
   dappsTransactions: (state, getters) => (dapp) => {
     const customJson = getters.dappCustomJson(dapp)
     const accounts = getters.dappAccounts(dapp)

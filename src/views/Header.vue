@@ -5,6 +5,7 @@
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
     <b-collapse id="nav-collapse" is-nav class="mr-0">
       <b-navbar-nav class="ml-auto">
+        <b-nav-item><router-link class="nav-link" to="/tribeslist">Tribes</router-link></b-nav-item>
         <b-nav-item><router-link class="nav-link" to="/about">About</router-link></b-nav-item>
         <b-nav-item class="nav-link" target="_blank" href="https://discord.gg/eXxA5BN">Support</b-nav-item>
       </b-navbar-nav>

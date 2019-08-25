@@ -11,6 +11,7 @@ export default new Vuex.Store({
     block: {},
     blockId: 0,
     transactions: [],
+    tribesTokens: [],
     transaction: {},
     transactionId: '',
     dapps: [
