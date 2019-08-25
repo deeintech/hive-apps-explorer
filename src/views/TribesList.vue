@@ -16,6 +16,27 @@
   </div>
   <div class="container mt-0">
     <div class="row">
+      <div class="col-12 d-flex justify-content-center">
+         <span
+          v-if="!tribes.length"
+          style="display: inline-block;
+          width: 2rem;
+          height: 2rem;
+          vertical-align: text-bottom;
+          border: .25em solid currentColor;
+          border-right-color: transparent;
+          border-radius: 50%;
+          -webkit-animation: spinner-border .75s linear infinite;
+          animation: spinner-border .75s linear infinite;width: 2rem;
+          height: 2rem;
+          border-width: .3em;"
+          class="spinner-border spinner-border-sm"
+          role="status"
+          aria-hidden="true"
+        ></span>
+      </div>
+    </div>
+    <div class="row">
       <div class="col-md-4 col-lg-3 d-flex justify-content-center" v-for="(token, index) in tribes" :key="index">
           <div class="card card-icon-2 card-body shadow-3d hover-bg-primary-3 pb-2 justify-content-center rounded-0">
             <div class="d-flex justify-content-between">
