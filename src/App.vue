@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <!-- <b-alert show dismissible id="vote" variant="secondary">
+    <b-alert show dismissible id="vote" variant="secondary">
       <span dismissable>Developed by <a href="https://steemit.com/@dmitrydao" target="_blank" class="font-weight-bold">@dmitrydao</a>. To support the project, please <a href="https://steemitwallet.com/~witnesses" target="_blank" class="font-weight-bold">vote for his witness.</a></span>
-    </b-alert> -->
+    </b-alert>
     <Header v-if='$route.name!="notFound"'/>
     <router-view/>
   </div>

@@ -17,7 +17,7 @@ export default {
       })
   },
   async fetchBlockById ({ commit }, blockId) {
-    const url = process.env.VUE_APP_STEEMIT_MAINNET_PROD
+    const url = process.env.VUE_APP_STEEMIT_MAINNET
     const headers = {
       'Content-Type': 'application/json'
     }
@@ -39,7 +39,7 @@ export default {
       })
   },
   async fetchLatestBlock ({ commit, dispatch }, blockId) {
-    const url = process.env.VUE_APP_STEEMIT_MAINNET_PROD
+    const url = process.env.VUE_APP_STEEMIT_MAINNET
     const headers = {
       'Content-Type': 'application/json'
     }

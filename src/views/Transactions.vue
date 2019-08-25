@@ -21,7 +21,7 @@
             </div>
           </div>
           <div class="col-md-6">
-            <b-alert show variant="primary" class="rounded-0"><a href="https://steemit.com/steem/@dmitrydao/transaction-details-for-app-devs-30-tribes-is-added" target="_blank">New update. Community feedback needed!</a></b-alert>
+            <b-alert show variant="primary" class="rounded-0"><router-link to="/tribeslist">Tribes List is live. Check it out!</router-link></b-alert>
           </div>
         </div>
       </div>
