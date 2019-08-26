@@ -60,7 +60,7 @@ export default {
         return []
       })
   },
-  async getTribesTokens ({ commit }, limit) {
+  async fetchTribesTokens ({ commit }, limit) {
     const contractsUrl = `${process.env.VUE_APP_STEEMENGINE_API}/contracts`
     const headers = {
       'Content-Type': 'application/json'
@@ -82,7 +82,7 @@ export default {
       .then(response => {
         let tokens = response.data.result
         commit('SET_TRIBES_TOKENS', tokens)
-        // console.log(tokens)
+        console.log(tokens)
         return tokens
       })
       .catch(() => {

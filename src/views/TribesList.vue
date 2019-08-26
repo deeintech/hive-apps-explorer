@@ -3,7 +3,7 @@
   <div class="container mt-0">
     <div class="row">
       <div class="col-lg-12">
-        <h2>Steem Tribes List</h2>
+        <h2>Tribes List</h2>
         <div class="row mb-2">
           <div class="col-md-7">
           </div>
@@ -11,7 +11,7 @@
             <input type="search" v-model="tribeName" class="form-control" placeholder="Input tribe name" />
           </div>
           <div class="col-md-1">
-            <b-form-select v-model="perPage" :options="pageOptions" @change="getTribesTokens"></b-form-select>
+            <b-form-select v-model="perPage" :options="pageOptions" @change="fetchTribesTokens"></b-form-select>
           </div>
         </div>
       </div>
@@ -20,23 +20,7 @@
   <div class="container mt-0">
     <div class="row">
       <div class="col-12 d-flex justify-content-center">
-         <span
-          v-if="!tribes.length"
-          style="display: inline-block;
-          width: 2rem;
-          height: 2rem;
-          vertical-align: text-bottom;
-          border: .25em solid currentColor;
-          border-right-color: transparent;
-          border-radius: 50%;
-          -webkit-animation: spinner-border .75s linear infinite;
-          animation: spinner-border .75s linear infinite;width: 2rem;
-          height: 2rem;
-          border-width: .3em;"
-          class="spinner-border spinner-border-sm"
-          role="status"
-          aria-hidden="true"
-        ></span>
+        <b-spinner label="Spinning" v-if="!tribes.length"></b-spinner>
       </div>
     </div>
     <div class="row">
@@ -82,12 +66,12 @@ export default {
     }
   },
   methods: {
-    getTribesTokens () {
-      this.$store.dispatch('getTribesTokens', this.perPage)
+    fetchTribesTokens () {
+      this.$store.dispatch('fetchTribesTokens', this.perPage)
     }
   },
   created () {
-    this.getTribesTokens ()
+    this.fetchTribesTokens ()
   }
 }
 </script>
