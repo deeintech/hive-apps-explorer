@@ -38,7 +38,7 @@
             <div>
               <h6 class="font-weight-bold">{{token.name}}</h6>
               <p class="border-bottom mb-1 pb-1">{{((metadata(token.symbol).desc && metadata(token.symbol).desc.length > 100) ? (metadata(token.symbol).desc.slice(0, 100) + '..' ) : metadata(token.symbol).desc) || 'No description provided'}}</p>
-              <span class="text-small">by <a :href="`https://steemit.com/@${token.issuer}`" class="font-weight-bold" target="_blank">@{{token.issuer}}</a></span>
+              <span class="text-small">by <a :href="`https://peakd.com/@${token.issuer}`" class="font-weight-bold" target="_blank">@{{token.issuer}}</a></span>
             </div>
           </div>
         </div>

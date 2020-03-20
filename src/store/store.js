@@ -149,7 +149,6 @@ export default new Vuex.Store({
         scotTokens: [],
         image: 'https://hive.io/_nuxt/img/52ad1fd.svg'
       },
-      
       { 
         text: 'Nextcolony',
         value: 'nextcolony',
@@ -159,7 +158,7 @@ export default new Vuex.Store({
         metadataAppNames: ['nextcolony'],
         scotTokens: [],
         image: 'https://steemitimages.com/u/nextcolony/avatar'
-      },
+      }
     ]
   },
   mutations: mutations,

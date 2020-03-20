@@ -13,7 +13,7 @@ export default {
       return 'created a bid '
     }
     if (op === 'sm_token_transfer') {
-      return 'transferred ' + getters.dappCustomJsonByTrxId(id).qty + ' ' + getters.dappCustomJsonByTrxId(id).token + ` tokens to <a href="https://steemit.com/@${getters.dappCustomJsonByTrxId(id).to}" target="_blank">@${getters.dappCustomJsonByTrxId(id).to}</a>`
+      return 'transferred ' + getters.dappCustomJsonByTrxId(id).qty + ' ' + getters.dappCustomJsonByTrxId(id).token + ` tokens to <a href="https://peakd.com/@${getters.dappCustomJsonByTrxId(id).to}" target="_blank">@${getters.dappCustomJsonByTrxId(id).to}</a>`
     }
     if (op === 'sm_open_pack') {
       return 'opened a pack of the ' + getters.dappCustomJsonByTrxId(id).edition + ' edition'
@@ -108,16 +108,16 @@ export default {
     // steem-engine
     if (op.startsWith('ssc-mainnet')) {
       if (getters.dappCustomJsonByTrxId(id).contractAction === 'stake') {
-        return 'staked ' + getters.dappCustomJsonByTrxId(id).contractPayload.quantity + ' ' + getters.dappCustomJsonByTrxId(id).contractPayload.symbol + ` tokens to <a href="https://steemit.com/@${getters.dappCustomJsonByTrxId(id).contractPayload.to}" target="_blank">@${getters.dappCustomJsonByTrxId(id).contractPayload.to} </a>`
+        return 'staked ' + getters.dappCustomJsonByTrxId(id).contractPayload.quantity + ' ' + getters.dappCustomJsonByTrxId(id).contractPayload.symbol + ` tokens to <a href="https://peakd.com/@${getters.dappCustomJsonByTrxId(id).contractPayload.to}" target="_blank">@${getters.dappCustomJsonByTrxId(id).contractPayload.to} </a>`
       }
       if (getters.dappCustomJsonByTrxId(id).contractAction === 'delegate') {
-        return 'delegated ' + getters.dappCustomJsonByTrxId(id).contractPayload.quantity + ' ' + getters.dappCustomJsonByTrxId(id).contractPayload.symbol + ` tokens to <a href="https://steemit.com/@${getters.dappCustomJsonByTrxId(id).contractPayload.to}" target="_blank">@${getters.dappCustomJsonByTrxId(id).contractPayload.to} </a>`
+        return 'delegated ' + getters.dappCustomJsonByTrxId(id).contractPayload.quantity + ' ' + getters.dappCustomJsonByTrxId(id).contractPayload.symbol + ` tokens to <a href="https://peakd.com/@${getters.dappCustomJsonByTrxId(id).contractPayload.to}" target="_blank">@${getters.dappCustomJsonByTrxId(id).contractPayload.to} </a>`
       }
       if (getters.dappCustomJsonByTrxId(id).contractAction === 'issue') {
-        return 'issued ' + getters.dappCustomJsonByTrxId(id).contractPayload.quantity + ' ' + getters.dappCustomJsonByTrxId(id).contractPayload.symbol + ` tokens to <a href="https://steemit.com/@${getters.dappCustomJsonByTrxId(id).contractPayload.to}" target="_blank">@${getters.dappCustomJsonByTrxId(id).contractPayload.to} </a>`
+        return 'issued ' + getters.dappCustomJsonByTrxId(id).contractPayload.quantity + ' ' + getters.dappCustomJsonByTrxId(id).contractPayload.symbol + ` tokens to <a href="https://peakd.com/@${getters.dappCustomJsonByTrxId(id).contractPayload.to}" target="_blank">@${getters.dappCustomJsonByTrxId(id).contractPayload.to} </a>`
       }
       if (getters.dappCustomJsonByTrxId(id).contractAction === 'transfer') {
-        return 'transferred ' + getters.dappCustomJsonByTrxId(id).contractPayload.quantity + ' ' + getters.dappCustomJsonByTrxId(id).contractPayload.symbol + ` tokens to <a href="https://steemit.com/@${getters.dappCustomJsonByTrxId(id).contractPayload.to}" target="_blank">@${getters.dappCustomJsonByTrxId(id).contractPayload.to} </a>`
+        return 'transferred ' + getters.dappCustomJsonByTrxId(id).contractPayload.quantity + ' ' + getters.dappCustomJsonByTrxId(id).contractPayload.symbol + ` tokens to <a href="https://peakd.com/@${getters.dappCustomJsonByTrxId(id).contractPayload.to}" target="_blank">@${getters.dappCustomJsonByTrxId(id).contractPayload.to} </a>`
       }
       if (getters.dappCustomJsonByTrxId(id).contractAction === 'cancel') {
         return 'canceled a market order '
@@ -134,25 +134,25 @@ export default {
     }
     // steem operations
     if (op === 'transfer') {
-      return `<a href="https://steemit.com/@${getters.dappJsonByTrxId(id).from}" target="_blank">@${getters.dappJsonByTrxId(id).from}</a>` + 
+      return `<a href="https://peakd.com/@${getters.dappJsonByTrxId(id).from}" target="_blank">@${getters.dappJsonByTrxId(id).from}</a>` + 
       ` transferred ${getters.dappJsonByTrxId(id).amount}` + 
-      ` to <a href="https://steemit.com/@${getters.dappJsonByTrxId(id).to}" target="_blank">@${getters.dappJsonByTrxId(id).to} </a>`
+      ` to <a href="https://peakd.com/@${getters.dappJsonByTrxId(id).to}" target="_blank">@${getters.dappJsonByTrxId(id).to} </a>`
     }
     if (op === 'vote') {
       if (JSON.stringify(getters.dappJsonByTrxId(id).voter) != undefined) {
-        return `<a href='https://steemit.com/@${getters.dappJsonByTrxId(id).voter}' target="_blank">@${getters.dappJsonByTrxId(id).voter}<a/>` +
-      ` upvoted a post <a class="font-weight-bold" href="https://steemit.com/@${getters.dappJsonByTrxId(id).author}/${getters.dappJsonByTrxId(id).permlink}" target="_blank">${getters.dappJsonByTrxId(id).permlink.slice(0, 30)}</a>`
+        return `<a href='https://peakd.com/@${getters.dappJsonByTrxId(id).voter}' target="_blank">@${getters.dappJsonByTrxId(id).voter}<a/>` +
+      ` upvoted a post <a class="font-weight-bold" href="https://peakd.com/@${getters.dappJsonByTrxId(id).author}/${getters.dappJsonByTrxId(id).permlink}" target="_blank">${getters.dappJsonByTrxId(id).permlink.slice(0, 30)}</a>`
       } else {
         return 'upvoted a post'
       }
     }
     if (op === 'comment') {
-      return `<a href='https://steemit.com/@${getters.dappJsonByTrxId(id).author}' target="_blank">@${getters.dappJsonByTrxId(id).author}<a/>` +
-      ` left a comment <a class="font-weight-bold" href="https://steemit.com/@${getters.dappJsonByTrxId(id).author}/${getters.dappJsonByTrxId(id).permlink}" target="_blank">${getters.dappJsonByTrxId(id).permlink.slice(0, 30)}</a>`
+      return `<a href='https://peakd.com/@${getters.dappJsonByTrxId(id).author}' target="_blank">@${getters.dappJsonByTrxId(id).author}<a/>` +
+      ` left a comment <a class="font-weight-bold" href="https://peakd.com/@${getters.dappJsonByTrxId(id).author}/${getters.dappJsonByTrxId(id).permlink}" target="_blank">${getters.dappJsonByTrxId(id).permlink.slice(0, 30)}</a>`
     }
     if (op === 'comment_options') {
-      return `<a href='https://steemit.com/@${getters.dappJsonByTrxId(id).author}' target="_blank">@${getters.dappJsonByTrxId(id).author}<a/>` +
-      ` set comment options <a class="font-weight-bold" href="https://steemit.com/@${getters.dappJsonByTrxId(id).author}/${getters.dappJsonByTrxId(id).permlink}" target="_blank">${getters.dappJsonByTrxId(id).permlink.slice(0, 30)}</a>`
+      return `<a href='https://peakd.com/@${getters.dappJsonByTrxId(id).author}' target="_blank">@${getters.dappJsonByTrxId(id).author}<a/>` +
+      ` set comment options <a class="font-weight-bold" href="https://peakd.com/@${getters.dappJsonByTrxId(id).author}/${getters.dappJsonByTrxId(id).permlink}" target="_blank">${getters.dappJsonByTrxId(id).permlink.slice(0, 30)}</a>`
     } else {
       return `performed ${op} operation` || ''
     }
