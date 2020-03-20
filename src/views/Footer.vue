@@ -1,6 +1,6 @@
 <template>
    <div class="container">
-      <div class="footer text-center">Steem Apps Explorer &copy;2019 | Developed by <a href="https://steemit.com/@dmitrydao" target="_blank">@dmitrydao</a>
+      <div class="footer text-center">Hive Apps Explorer &copy;2019 | Developed by <a href="https://peakd.com/@dmitrydao" target="_blank">@dmitrydao</a>
       </div>
    </div>
 </template>

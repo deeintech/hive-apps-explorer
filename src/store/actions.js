@@ -9,7 +9,6 @@ export default {
     await axios.get(`${baseUrl}/account_history_api/get_transaction?id=${trxId}`)
       .then(response => {
         commit('SET_TRANSACTION', response.data)
-        // console.log(response.data)
         return response.data
       })
       .catch(() => {
@@ -17,7 +16,7 @@ export default {
       })
   },
   async fetchBlockById ({ commit }, blockId) {
-    const url = process.env.VUE_APP_STEEMIT_MAINNET
+    const url = process.env.VUE_APP_HIVE_MAINNET
     const headers = {
       'Content-Type': 'application/json'
     }
@@ -31,7 +30,6 @@ export default {
       .then(response => {
         commit('SET_BLOCK', response.data.result)
         commit('SET_TRANSACTIONS', response.data.result.transactions)
-        // console.log(response.data.result.transactions)
         return response.data.result
       })
       .catch(() => {
@@ -39,7 +37,7 @@ export default {
       })
   },
   async fetchLatestBlock ({ commit, dispatch }, blockId) {
-    const url = process.env.VUE_APP_STEEMIT_MAINNET
+    const url = process.env.VUE_APP_HIVE_MAINNET
     const headers = {
       'Content-Type': 'application/json'
     }
@@ -82,7 +80,6 @@ export default {
       .then(response => {
         let tokens = response.data.result
         commit('SET_TRIBES_TOKENS', tokens)
-        console.log(tokens)
         return tokens
       })
       .catch(() => {

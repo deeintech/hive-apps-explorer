@@ -11,9 +11,9 @@
                 <div class="col-xl-8 col-lg-10">
                     <span class="badge badge-primary">Mission</span>
                     <div class="my-3">
-                    <span class="h1">To inspire users to use <a href="https://steem.com" target="_blank">Steem</a> for their business</span>
+                    <span class="h1">To inspire users to use <a href="https://hive.io" target="_blank">Hive</a> for their business</span>
                     </div>
-                    <p class="lead"><a href="https://steemit.com/@dmitrydao" class="font-weight-bold" target="_blank">Dmitry Baimuratov</a> is a front-end dev who creates products for blockchain communities. To support his work for Steem blockchain, please vote  for <a href="https://steemitwallet.com/~witnesses" target="_blank" class="font-weight-bold">@dmitrydao witness</a>.</p>
+                    <p class="lead"><a href="https://peakd.com/@dmitrydao" class="font-weight-bold" target="_blank">Dmitry Baimuratov</a> is a front-end dev who creates products for blockchain communities. To support his work for Hive blockchain, please vote  for <a href="https://peakd.com/witnesses" target="_blank" class="font-weight-bold">@dmitrydao witness</a>.</p>
                 </div>
                 </div>
             </div>
@@ -31,7 +31,7 @@
         </div>
         <div class="row">
           <div class="col-auto">
-            <small class="text-muted">©2019 Steem Apps Explorer</small>
+            <small class="text-muted">©2019 Hive Apps Explorer</small>
           </div>
         </div>
     </div>

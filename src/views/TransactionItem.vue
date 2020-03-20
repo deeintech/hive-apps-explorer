@@ -8,7 +8,7 @@
      <section class="bg-primary-alt header-inner">
       <div class="container">
         <h5 class="text-center mb-5">Transaction #{{trxId}}</h5>
-        <div class="alert alert-primary rounded-0" role="alert" v-if="!trx.operations">
+        <div class="alert alert-danger rounded-0" role="alert" v-if="!trx.operations">
           Ooops. Can't find your transaction. Please wait for a couple of minutes and try one more time.
         </div>
         <div class="col-md-9 offset-2" v-if="trx.operations">

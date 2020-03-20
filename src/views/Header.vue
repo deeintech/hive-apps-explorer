@@ -1,7 +1,7 @@
 <template>
 <div class="container">
   <b-navbar class="navbar-light border-bottom-0" toggleable="lg" type="light" variant="faded">
-    <b-navbar-brand><router-link to="/" class="navbar-brand">Steem Apps Explorer</router-link></b-navbar-brand>
+    <b-navbar-brand><router-link to="/" class="navbar-brand">Hive Apps Explorer</router-link></b-navbar-brand>
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
     <b-collapse id="nav-collapse" is-nav class="mr-0">
       <b-navbar-nav class="ml-auto">

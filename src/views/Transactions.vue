@@ -20,9 +20,9 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <b-alert show variant="primary" class="rounded-0"><router-link to="/tribeslist">Tribes List is live. Check it out!</router-link></b-alert>
-          </div>
+          <!-- <div class="col-md-6">
+            <b-alert show variant="danger" class="rounded-0"><a href="https://hive.io" target="_blank">Hive Blockchain is live. Check it out!</a></b-alert>
+          </div> -->
         </div>
       </div>
       <div class="container">
@@ -43,7 +43,7 @@
                   </div>
                   <div v-for="op in trx.operations" :key="op.key">
                     <div class="mb-2">
-                      <span v-if="op[0] === 'custom_json'" class="mr-1"><a :href='`https://steemit.com/@${(op[1].required_posting_auths[0] || op[1].required_auths[0])}`' target="_blank">@{{op[1].required_posting_auths[0] || op[1].required_auths[0]}}</a></span>
+                      <span v-if="op[0] === 'custom_json'" class="mr-1"><a :href='`https://peakd.com/@${(op[1].required_posting_auths[0] || op[1].required_auths[0])}`' target="_blank">@{{op[1].required_posting_auths[0] || op[1].required_auths[0]}}</a></span>
                       <span v-html="dappInfo(op[1].id || op[0], trx.transaction_id)"></span>
                     </div>
                   </div>
@@ -117,6 +117,6 @@ export default {
 
 <style>
 .app{
-  border: 1.2pt solid #eeeeee;
+  border: 1.2pt solid #e7e7f1;
 }
 </style>
