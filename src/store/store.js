@@ -158,6 +158,16 @@ export default new Vuex.Store({
         metadataAppNames: ['nextcolony'],
         scotTokens: [],
         image: 'https://steemitimages.com/u/nextcolony/avatar'
+      },
+      { 
+        text: 'Hiveblog',
+        value: 'hiveblog',
+        customJson: ['hiveblog'],
+        accounts: ['hiveblog'],
+        metadataTags: ['hiveblog'],
+        metadataAppNames: ['hiveblog'],
+        scotTokens: [],
+        image: 'https://pbs.twimg.com/profile_images/1240280499626684417/w_q7vezk_400x400.jpg'
       }
     ]
   },
