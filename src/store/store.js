@@ -26,18 +26,18 @@ export default new Vuex.Store({
         scotTokens: [''],
         image: 'https://pbs.twimg.com/profile_images/1240280499626684417/w_q7vezk_400x400.jpg'
       },
-      { 
-        text: 'TRIBES',
-        value: 'tribes',
-        customJson: [],
-        accounts: ['sports', 'neoxian', 'one.life'],
-        metadataTags: ['tribes', 'steemzzang', 'neoxag', 'sct', 'stem', 'weedcash', 'sports', 'leo', 'jahm', 'lifestyle'],
-        metadataAppNames: ['weedcash', 'steemleo'],
-        scotTokens: ['NEOXAG', 'CCC', 'LEO', 'GG', 'STEM', 'NATRL', 'SONIC', 'ACTNEARN',
-        'ASS', 'ATTDUMMY', 'BATTLE', 'BLQ', 'BPC', 'CTP', 'DOLPHIN', 'ENG', 'INT', 'IV', 'JAHM', 'LIFESTYLE', 'LIV',
-        'MARLIANS', 'MOT', 'NGA', 'RHB', 'SPACO', 'SPORTS', 'TMT', 'TUNES', 'UFM', 'WEED', 'BEER', 'LIFESTYLE'],
-        image: 'https://s3.amazonaws.com/steem-engine/images/icon_steem-engine_gradient.svg'
-      },
+      // { 
+      //   text: 'TRIBES',
+      //   value: 'tribes',
+      //   customJson: [],
+      //   accounts: ['sports', 'neoxian', 'one.life'],
+      //   metadataTags: ['tribes', 'steemzzang', 'neoxag', 'sct', 'stem', 'weedcash', 'sports', 'leo', 'jahm', 'lifestyle'],
+      //   metadataAppNames: ['weedcash', 'steemleo'],
+      //   scotTokens: ['NEOXAG', 'CCC', 'LEO', 'GG', 'STEM', 'NATRL', 'SONIC', 'ACTNEARN',
+      //   'ASS', 'ATTDUMMY', 'BATTLE', 'BLQ', 'BPC', 'CTP', 'DOLPHIN', 'ENG', 'INT', 'IV', 'JAHM', 'LIFESTYLE', 'LIV',
+      //   'MARLIANS', 'MOT', 'NGA', 'RHB', 'SPACO', 'SPORTS', 'TMT', 'TUNES', 'UFM', 'WEED', 'BEER', 'LIFESTYLE'],
+      //   image: 'https://s3.amazonaws.com/steem-engine/images/icon_steem-engine_gradient.svg'
+      // },
       { 
         text: 'Bots/Promo',
         value: 'bots',
@@ -79,16 +79,16 @@ export default new Vuex.Store({
         scotTokens: [],
         image: 'https://pbs.twimg.com/profile_images/1084063368103817216/UlvXq_S0_400x400.jpg'
       },
-      { 
-        text: 'Steem Engine',
-        value: 'steem-engine',
-        customJson: ['ssc-', 'scot_', 'scotauto'],
-        accounts: ['steem-engine'],
-        metadataTags: ['steem-engine', 'tribes'],
-        metadataAppNames: ['steem-engine'],
-        scotTokens: [],
-        image: 'https://s3.amazonaws.com/steem-engine/images/icon_steem-engine_gradient.svg'
-      },
+      // { 
+      //   text: 'Steem Engine',
+      //   value: 'steem-engine',
+      //   customJson: ['ssc-', 'scot_', 'scotauto'],
+      //   accounts: ['steem-engine'],
+      //   metadataTags: ['steem-engine', 'tribes'],
+      //   metadataAppNames: ['steem-engine'],
+      //   scotTokens: [],
+      //   image: 'https://s3.amazonaws.com/steem-engine/images/icon_steem-engine_gradient.svg'
+      // },
       { 
         text: 'Actifit',
         value: 'actifit',

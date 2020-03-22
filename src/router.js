@@ -23,11 +23,11 @@ export default new Router({
       name: 'about',
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
     },
-    {
-      path: '/tribeslist',
-      name: 'tribeslist',
-      component: () => import(/* webpackChunkName: "tribeslist" */ './views/TribesList.vue')
-    },
+    // {
+    //   path: '/tribeslist',
+    //   name: 'tribeslist',
+    //   component: () => import(/* webpackChunkName: "tribeslist" */ './views/TribesList.vue')
+    // },
     {
       path: '/trx/:trxId',
       name: 'trxItem',
